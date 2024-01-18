@@ -14,11 +14,21 @@ header {
     justify-content: flex-end;
 }
 
+.header-img-container img {
+    display: block;
+}
+
 .header-hamberger-menu {
     background-color: transparent;
     border: none;
     padding: 12px;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.header-hamberger-menu img {
+    display: block;
 }
 
 .header-logo {
@@ -33,34 +43,92 @@ header {
     display: none;
 }
 
+.main-banner-slider {
+    width: 100%
+}
+
+.main-slider-container img {
+    width: 100%;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .section-title-area h3 {
     font-family: "Noto Sans KR", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     font-style: normal;
     font-size: 28px;
+    color: #353535;
+    line-height: normal;
 }
 
 .section-title-area p {
       font-family: "Noto Sans", sans-serif;
-      font-weight: 600;
+      font-weight: 700;
       font-style: normal;
       font-size: 24px;
+      color: #353535;
+      line-height: normal;
     }
 
 
 .section-more { 
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
     font-size: 18px;
-    display: flex;
-    justify-items: flex-end;
+    color: #353535;
+    line-height: normal;
 }
 
-.best-gmes-video {
+.best-games {
     width: 100%;
 }
 
+.best-games-container {
+    display: flex;
+    padding: 49px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.best-games-content {
+    width: 100%;
+}
+
+.section-title-area {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.best-games-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* 비디오 조절 https://note.redgoose.me/article/1847 */
+.best-games-video {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 */
+    position: relative;
+    border-radius: 20px;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+}
+
+.best-games-notice-container {
+    display: none;
+}
