@@ -211,11 +211,123 @@ header {
 }
 
 .characters-img-container{
+    position: relative;
     width: 100%;
-    height: 500px;
-    background-image: url(../img/characters/red-Rectangle\ 779.png); 
-    background-size: 20%;
-    background-repeat: repeat;
+    height: 0;
+    padding-bottom: 100%;
+    text-align: center;
 }
 
-.header-img-container{}
+.characters-background {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/characters/bg-01-red.png);
+    background-size: auto 20%;
+    background-repeat: repeat;
+    position: absolute;
+    display: block;
+    border-radius: 20px;
+}
+
+.characters-img img {
+    width: 105%;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    overflow: hidden;
+}
+
+.characters-more {
+    display: none;
+
+}
+
+.characters-information-container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.characters-note-background {
+    position: absolute;
+    background-image: url(../img/characters/bg-01.png);
+    width: 100%;
+    height: 100%;
+    background-size: auto 40%;
+    background-repeat: repeat;
+    opacity: 30%;
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.note-container-characters {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.characters-title h3 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+    color: #353535;
+    line-height: normal;
+}
+
+.characters-note {
+    margin-top: 10px;
+}
+.characters-note p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #353535;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;    
+}
+
+.note-bold {
+    font-family: 600;
+}
+
+.note-more-characters {
+    width: 78px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1.5px solid #E60012;
+    align-items: center;
+    padding: 1px 15px;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+}
+
+.note-more-characters a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #353535;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+}
