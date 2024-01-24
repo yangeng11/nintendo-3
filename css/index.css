@@ -40,7 +40,8 @@ header {
 }
 
 .header-logo a > img {
-    width: 80%;
+    display: block;
+    width: 120px;
 }
 
 #menu {
@@ -201,6 +202,7 @@ header {
 
 .best-games-list-container { 
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 10px;
     column-gap: 6px;
@@ -210,9 +212,8 @@ header {
 
 .best-games-list-button img {
     display: block;
-    width: 108px;
-    height: 60px;
-    border-radius: 40px;
+    width: 100%;
+    border-radius: 100px;
 }
 
 .characters-img-container{
@@ -308,19 +309,27 @@ header {
 }
 
 .note-more-characters {
-    width: 46px;
-    height: 26px;
+    width: 80PX;
+    height: 30PX;
     border-radius: 20px;
-    border: 1.5px solid #E60012;
-    padding: 0px 15px;
+    border: 1px solid #E60012;
+    padding: 1px 15px;
     margin-left: auto;
     margin-top: 10px;
-    display: flex;
     text-align: center;
     position: relative;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #353535;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
 }
 
-.note-more-characters a {
+/* .note-more-characters button {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -335,7 +344,7 @@ header {
     justify-content: center;
     line-height: normal;
     left: 0;
-}
+} */
 
 .slider-control-container {
     width: 100%;
@@ -384,18 +393,22 @@ header {
     gap: 8px;
 }
 
-.new-games-img {
+.new-games-img-main {
     width: 45%;
 }
 
-.new-games-img a {
-    display: block;
-}
-
-.new-games-img a > img {
+.new-games-img-main a {
     display: block;
     width: 100%;
+    aspect-ratio: 10 / 7;
+}
+
+.new-games-img-main a > img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .new-games-information-container {
@@ -414,6 +427,10 @@ header {
     text-decoration: none;
     color: #353535;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .new-games-title {
@@ -427,6 +444,8 @@ header {
 
 .new-games-title p {
     font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .new-games-notice-content {
@@ -443,16 +462,36 @@ header {
     color: #474747;
     font-size: 10px;
     font-weight: 500;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.new-games-note dl {
+    display: flex;
+    gap: 6px;
 }
 
 .new-games-note2 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .new-games-img {
     display: flex;
     gap: 6px;
     align-items: flex-start;
+}
+
+.new-games-img > img:last-child {
+    display: none;
+}
+
+@media screen and (min-width:800px) { 
+    .new-games-img > img:last-child {
+        display: inline-block;
+    }   
 }
