@@ -121,6 +121,7 @@ header {
 
 .best-games-main-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -862,8 +863,20 @@ header {
 }
 
 @media screen and (min-width : 768px) {
+    body {
+        font-family: "Noto Sans KR", sans-serif;
+        font-style: normal;
+        line-height: normal;
+        
+    }
+
     header {
-        background-color: #fff
+        background-color: #fff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-container {
+        display: flex;
     }
 
     .header-img-container {
@@ -873,7 +886,7 @@ header {
     .header-logo {
         position: relative;
         width: 140px;
-        height: 60px;
+        height: 56px;
         background-color: #e60012;
         border-bottom-right-radius: 10px;
         box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
@@ -888,36 +901,82 @@ header {
     #menu { 
         display: inline;
         width: 100%;
+        height: 50px;
+    }
+
+    .all-header-menu-container {
+        display: flex;
+        width: auto;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+    .all-header-menu-container nav {
+        width: 75%;
+        padding-left: 20px
     }
 
     .home-menu-container {
         display: flex;
         width: 100%;
-        align-items: flex-start;
-        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;     
     }
 
     .home-menu > a {
+        width: 100%;
+        height: 100%;
         display: block;
         text-decoration: none;
+        color: #444;
+        font-size: 18px;
+        font-weight: 600;
     }
 
     .header-hamberger-menu {
         display: none;
     }
 
-
     .home-account-container li:last-child {
         display: none;
     }
 
-    .home-online-container a {
-        color: transparent;
+    .home-account-online-container {
+        display: flex;
+        width: 20%;
+        height: 34px;
+        border-radius: 20px;
+        background-image: url(../img/characters/bg-01-red.png);
+        background-size: auto 140%;
+        background-repeat: repeat;
+        align-items: center;
+        justify-content: center;
+        margin-left: 40px;
     }
 
-    .home-online-container a::after {
-        content: "온라인";
-        color: initial;
+    .home-account-online-container a {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+    }
+
+    .home-account-container {
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px solid #fff;
+    }
+
+    .home-online-container {
+        width: 40%;
+        align-items: center;
+        justify-content: center;
     }
 
 
