@@ -781,5 +781,154 @@ header {
 }
 
 .office-frist-note {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+}
+
+.office-last-note {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.office-other-information-container {
+    width: 100%;
+    font-family: "Noto Sans KR", sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #494949;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 10px;
+}
+
+.office-other-information-part1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.office-other-information-part1 > dl {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.office-other-information-part2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.office-other-information-part2 > dl {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.office-copy {
+    color: #494949;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.bottom-logo {
+    width: 100%;
+    height: 62px;
+    background-color: #E60012;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-logo a {
+    display: block;
+    width: 110px;
+}
+
+.bottom-logo a > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width : 768px) {
+    header {
+        background-color: #fff
+    }
+
+    .header-img-container {
+        justify-content: flex-start;
+    }
+
+    .header-logo {
+        position: relative;
+        width: 140px;
+        height: 60px;
+        background-color: #e60012;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: auto;
+        top: auto;
+        transform: none;
+    }
+
+    #menu { 
+        display: inline;
+        width: 100%;
+    }
+
+    .home-menu-container {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .home-menu > a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .header-hamberger-menu {
+        display: none;
+    }
+
+
+    .home-account-container li:last-child {
+        display: none;
+    }
+
+    .home-online-container a {
+        color: transparent;
+    }
+
+    .home-online-container a::after {
+        content: "온라인";
+        color: initial;
+    }
+
+
+
+
+    .best-games-list-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+}
+
+@media screen and (min-width: pc-px) {
+    
 }
