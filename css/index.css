@@ -628,6 +628,10 @@ header {
     line-height: normal;   
 }
 
+.news-slider-control-container {
+    margin-top: 10px;
+}
+
 .new-badge::before{
     content: "NEW";
     color: #e66100;
@@ -786,7 +790,7 @@ header {
     text-align: center;
     padding: 5px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -795,15 +799,17 @@ header {
 
 .office-frist-note {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
 }
 
-.office-last-note {
+/* .office-last-note {
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .office-other-information-container {
     width: 100%;
@@ -874,7 +880,7 @@ header {
     height: 100%;
 }
 
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 840px) {
     body {
         font-family: "Noto Sans KR", sans-serif;
         font-style: normal;
@@ -926,7 +932,7 @@ header {
     }
 
     .all-header-menu-container nav {
-        width: 75%;
+        width: 80%;
         padding-left: 20px
     }
 
@@ -944,7 +950,7 @@ header {
         display: block;
         text-decoration: none;
         color: #444;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
     }
 
@@ -972,10 +978,11 @@ header {
     .home-account-online-container a {
         display: block;
         text-decoration: none;
-        font-size: 14px;
-        font-weight: 700;
+        font-size: 12px;
+        font-weight: 500;
         color: #fff;
         text-align: center;
+        line-height: 100%;
     }
 
     .home-account-container {
@@ -1049,10 +1056,28 @@ header {
     .new-games-container {
         flex-direction: row;
         overflow: hidden;
+        gap: 12px;
     }
 
-    .new-games-content :nth-last-child(-n+2) {
-        display: none;
+    .new-games-part {
+        width: calc((100vw - (32px*2) - (12px*2)) / 3);
+        flex-direction: column;
+    }
+
+    .new-games-img-main {
+        width: 100%;
+    }
+
+    .new-games-information-container {
+        width: 100%;
+    }
+
+    .new-games-information-container > a {
+        border: 1px solid #DEDEDE;
+        border-radius: 20px;
+        gap: 16px;
+        padding: 10px 10px;
+        box-sizing: border-box;
     }
 
     .switch-acc-list-container {
@@ -1082,6 +1107,21 @@ header {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .office-frist-note {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .office-information {
+        padding: 20px 32px;
+    }
+
+    .office-other-information-container {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 14px;
     }
 
 }
