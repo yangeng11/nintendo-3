@@ -14,6 +14,10 @@ header {
     justify-content: flex-end;
 }
 
+.header-img-container a {
+    display: block;
+}
+
 .header-img-container img {
     display: block;
 }
@@ -217,6 +221,14 @@ header {
     display: block;
     width: 100%;
     border-radius: 100px;
+    filter: brightness(50%);
+}
+
+.best-games-list-button.active img {
+    /* 여기에 활성화된 이미지에 적용할 특정 스타일을 추가하세요 */
+    /* 예: 효과를 주기 위한 스타일 */
+    filter: brightness(110%);
+
 }
 
 .characters-img-container{
@@ -978,14 +990,100 @@ header {
         align-items: center;
         justify-content: center;
     }
+    
+    .section-container {
+        padding: 42px 32px;
+    }
 
+    .best-games-note-container {
+        flex-direction: row;
+    }
 
+    .best-games-title-kr {
+        width: 150px;
+    }
 
+    .best-games-title-kr h3 {
+        font-size: 30px;
+    }
+
+    .best-games-list-container {
+        margin-top: 10px;
+    }
+
+    .best-games-note {
+        width: 80%;
+        -webkit-line-clamp: 3;
+    }
 
     .best-games-list-container {
         grid-template-columns: repeat(6, 1fr);
     }
-    
+
+
+    .character-content {
+        display: flex;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .characters-list-container {
+        width: 100%;
+    }
+
+    .characters-img-container {
+        width: 50%;
+    }
+
+    .characters-information-container {
+        width: 50%;
+        margin-top: 0;
+        height: auto;
+    }
+
+
+    .characters-img-container {
+        padding-bottom: 50%;
+    }
+
+    .new-games-container {
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .new-games-content :nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .switch-acc-list-container {
+        justify-content: space-between;
+        gap: 14px;
+    }
+
+    .other-information {
+        flex-direction: row;
+        padding: 32px;
+    }
+
+    .news-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .news-right-container > h3 {
+        display: inline;
+        color: transparent;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .news-right-container {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
 }
 
 @media screen and (min-width: pc-px) {
